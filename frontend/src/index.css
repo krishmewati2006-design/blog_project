@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: oklch(99% 0.002 240);
+    --surface: oklch(100% 0 0);
+    --fg: oklch(18% 0.012 250);
+    --muted: oklch(54% 0.012 250);
+    --border: oklch(92% 0.005 250);
+    --accent: oklch(58% 0.18 255);
+    --error: oklch(62.8% 0.25 29.2);
+    --success: oklch(70% 0.18 144);
+
+    --font-display: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+    --font-body: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace;
+  }
+
+  .dark {
+    --bg: oklch(18% 0.012 250);
+    --surface: oklch(22% 0.015 250);
+    --fg: oklch(95% 0.005 250);
+    --muted: oklch(70% 0.01 250);
+    --border: oklch(30% 0.02 250);
+    --accent: oklch(65% 0.2 255);
+  }
+
+  body {
+    @apply bg-bg text-fg font-body;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent disabled:pointer-events-none disabled:opacity-50 rounded;
+  }
+  .btn-primary {
+    @apply bg-accent text-white hover:opacity-90;
+  }
+  .btn-outline {
+    @apply border border-border bg-transparent hover:bg-surface;
+  }
+  .btn-ghost {
+    @apply hover:bg-surface;
+  }
+  
+  .input {
+    @apply flex h-10 w-full rounded border border-border bg-surface px-3 py-2 text-sm ring-offset-bg file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .card {
+    @apply rounded border border-border bg-surface text-fg shadow-sm;
+  }
+}

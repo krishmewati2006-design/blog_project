@@ -1,0 +1,67 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Documentation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --bg: oklch(99% 0.002 240);
+      --surface: oklch(100% 0 0);
+      --fg: oklch(18% 0.012 250);
+      --accent: oklch(58% 0.18 255);
+      --border: oklch(92% 0.005 250);
+    }
+    body { background-color: var(--bg); color: var(--fg); font-family: system-ui, -apple-system, sans-serif; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; }
+  </style>
+</head>
+<body class="p-8">
+  <div class="max-w-3xl mx-auto space-y-8">
+    <header class="text-center space-y-2">
+      <div class="h-12 w-12 bg-accent rounded-lg mx-auto mb-4"></div>
+      <h1 class="text-4xl font-bold tracking-tight">DevBlog Frontend Ready</h1>
+      <p class="text-slate-500">Modern React frontend for your Django REST API</p>
+    </header>
+
+    <div class="card p-6 space-y-6">
+      <h2 class="text-xl font-bold border-b pb-2">Quick Start</h2>
+      <div class="space-y-4">
+        <div class="bg-slate-900 text-slate-100 p-4 rounded font-mono text-sm">
+          <p>cd frontend</p>
+          <p>npm install</p>
+          <p>npm run dev</p>
+        </div>
+        <p class="text-sm">The frontend will be available at <span class="text-accent font-semibold">http://localhost:5173</span></p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="card p-4">
+        <h3 class="font-bold mb-2">Mapped API Routes</h3>
+        <ul class="text-sm space-y-1 text-slate-600">
+          <li>• Auth: /api/register/, /api/login/</li>
+          <li>• Posts: /api/posts/</li>
+          <li>• Detail: /api/posts/&lt;slug&gt;/</li>
+          <li>• Comments: /api/posts/&lt;id&gt;/comments/</li>
+        </ul>
+      </div>
+      <div class="card p-4">
+        <h3 class="font-bold mb-2">UI Features</h3>
+        <ul class="text-sm space-y-1 text-slate-600">
+          <li>• Responsive Tailwind Design</li>
+          <li>• Native Dark Mode support</li>
+          <li>• Protected Auth Routes</li>
+          <li>• Full CRUD for Articles</li>
+        </ul>
+      </div>
+    </div>
+
+    <footer class="text-center text-sm text-slate-400">
+      Project structure created successfully in /frontend directory.
+    </footer>
+  </div>
+</body>
+</html>

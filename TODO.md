@@ -1,0 +1,13 @@
+- 1. Initialize Vite React project in `frontend/` directory
+- 2. Setup Tailwind CSS with OKLch color tokens from `brand-spec.md`
+- 3. Create core API service layer using Axios with interceptors for Token Auth
+- 4. Implement AuthContext for global state management (Login, Logout, Token storage)
+- 5. Build reusable UI components (Navbar, Button, Input, PostCard, LoadingSpinner)
+- 6. Implement Routing with ProtectedRoutes for Create/Edit/Delete actions
+- 7. Build Pages:
+    - `Home.jsx` (List published posts)
+    - `PostDetail.jsx` (View post + Comments)
+    - `Login.jsx` & `Register.jsx`
+    - `CreateEditPost.jsx` (Form for creating/updating posts)
+- 8. Add Dark Mode support and responsive polishing
+- 9. Final verification: Check against backend routes and serializers
